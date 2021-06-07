@@ -1,0 +1,28 @@
+{
+    "name": "word-relay-react",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "cd client && npm run build",
+        "install-client": "cd client && npm install",
+        "heroku-postbuild": "npm run install-client && npm run build",
+        "start": "node server.js",
+        "client": "cd client && npm start",
+        "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bulma": "^0.9.2",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.12.13",
+        "morgan": "^1.10.0",
+        "react-particles-js": "^3.4.1",
+        "use-sound": "^4.0.0",
+        "validator": "^13.6.0"
+    }
+}
